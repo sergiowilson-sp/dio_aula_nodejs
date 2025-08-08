@@ -15,6 +15,6 @@ router.get("/contato", (req, res) => {
 
 app.use(router)
 
-app.listen(3333, () => {
-    console.log("Server is running on http://localhost:3333")
+app.listen(process.env.PORT || 3333, () => {
+    console.log("Server is running on http://localhost:${process.env.PORT || 3333}")
 })
